@@ -8,12 +8,12 @@ public class MyService {
 
     @AutoIdempotent  //使用AOP方式
     public String myTest(String name){
-        System.out.println("call mytest :" + name);
+        System.out.println("call mytest AutoIdempotent:" + name);
         return name;
     }
 
-    public String myTest2(String name){
-        System.out.println("call mytest2 :" + name);
+    public String myTestNonAutoIdempotent(String name){
+        System.out.println("call myTest NonAutoIdempotent :" + name);
         return name;
     }
 }

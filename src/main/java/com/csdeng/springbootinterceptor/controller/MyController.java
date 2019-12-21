@@ -17,7 +17,7 @@ public class MyController {
     //@AutoIdempotent //使用Interceptor方式，则需要在controller中注解
     @RequestMapping("/test")
     public String test(@RequestParam String name){
-        myService.myTest2(name);
-        return myService.myTest(name);
+        myService.myTest(name);
+        return myService.myTestNonAutoIdempotent(name);
     }
 }
